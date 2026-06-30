@@ -1,0 +1,707 @@
+Complete Product Requirement Document (PRD)
+Product Name
+
+STEM Quest
+
+Tagline
+
+Play. Learn. Explore. Build Your Future.
+
+Problem Statement
+
+Rural students from Classes 6–12 often experience:
+
+Fear of Mathematics and Science
+Lack of engaging learning methods
+Limited access to quality STEM resources
+Minimal exposure to practical experiments
+Low confidence after repeated failures
+Poor motivation due to rote learning
+
+The platform addresses these challenges through curriculum-aligned gamification.
+
+Vision
+
+To make STEM education exciting, interactive, and confidence-building for every rural student.
+
+Mission
+
+Create India's most engaging gamified STEM platform that helps rural students:
+
+Overcome fear
+Develop scientific curiosity
+Build confidence
+Learn by doing
+Improve academic performance
+Target Users
+Primary
+Class 6
+Class 7
+Class 8
+Class 9
+Class 10
+Class 11
+Class 12
+Secondary
+Teachers
+Parents
+School Principals
+NGOs
+Government Schools
+Platform Goals
+Educational
+
+✔ Reduce STEM anxiety
+
+✔ Increase interest
+
+✔ Improve conceptual understanding
+
+✔ Increase attendance
+
+✔ Improve exam performance
+
+Business
+
+✔ High Daily Active Users
+
+✔ High Lesson Completion
+
+✔ Strong Retention
+
+✔ Community Growth
+
+Homepage Design (Inspired by PW Structure)
+------------------------------------------------------
+LOGO
+
+Home
+Classes
+Subjects
+STEM Lab
+Challenges
+Leaderboard
+Teachers
+Parents
+
+Login
+
+------------------------------------------------------
+
+Hero Banner
+
+"Every Student Can Become a Scientist"
+
+[ Start Learning ]
+
+[ Play Demo ]
+
+Background
+
+Village School
+Robotics
+Science Lab
+Happy Students
+
+------------------------------------------------------
+
+Quick Categories
+
+Class 6
+
+Class 7
+
+Class 8
+
+Class 9
+
+Class 10
+
+Class 11
+
+Class 12
+
+------------------------------------------------------
+
+Subjects
+
+🧮 Mathematics
+
+🔬 Science
+
+⚛ Physics
+
+🧪 Chemistry
+
+🌱 Biology
+
+💻 Coding
+
+🤖 Robotics
+
+------------------------------------------------------
+
+Daily Challenge
+
+Today's Mission
+
+Earn 100 XP
+
+------------------------------------------------------
+
+Leaderboard
+
+Top Students
+
+Top Schools
+
+Top Villages
+
+------------------------------------------------------
+
+Achievement Badges
+
+🏆 Science Hero
+
+🥇 Math Master
+
+⭐ Coding Ninja
+
+------------------------------------------------------
+
+Parents Section
+
+Track Child Progress
+
+------------------------------------------------------
+
+Teacher Dashboard
+
+Assignments
+
+Analytics
+
+Performance
+
+------------------------------------------------------
+Navigation Bar
+LOGO
+
+Home
+
+Learn
+
+Play
+
+Experiments
+
+Leaderboard
+
+Community
+
+Parents
+
+Teachers
+
+About
+
+Login
+Home Page Sections
+Hero Banner
+
+Large illustration
+
+Village students performing a science experiment.
+
+Heading
+
+Learning STEM Through Adventure
+
+Subheading
+
+Learn Science and Mathematics through games, stories, experiments, and rewards.
+
+Buttons
+
+Start Learning
+
+Watch Demo
+
+Feature Cards
+Learn with Games
+
+Play while studying.
+
+Interactive STEM Labs
+
+Virtual experiments.
+
+Daily Missions
+
+Complete fun learning challenges.
+
+Rewards
+
+Earn XP
+
+Coins
+
+Badges
+
+Certificates
+
+AI Learning Companion (Future)
+
+Personalized hints
+
+Adaptive quizzes
+
+Voice support
+
+Dashboard Design
+---------------------------------------------------
+
+Welcome
+
+Good Morning Rahul
+
+Level 8
+
+XP
+
+1250
+
+Coins
+
+450
+
+Streak
+
+21 Days
+
+---------------------------------------------------
+
+Continue Learning
+
+Science
+
+75%
+
+Mathematics
+
+58%
+
+Coding
+
+20%
+
+---------------------------------------------------
+
+Today's Quest
+
+Complete
+
+Fractions Mission
+
+Reward
+
+100 XP
+
+---------------------------------------------------
+
+Achievements
+
+⭐ Math Warrior
+
+⭐ Science Explorer
+
+⭐ Coding Beginner
+
+---------------------------------------------------
+
+Upcoming Challenge
+
+Village STEM Championship
+
+---------------------------------------------------
+Course Structure
+Class Selection
+Class 6
+
+↓
+
+Science
+
+↓
+
+Chapter
+
+↓
+
+Mission
+
+↓
+
+Quiz
+
+↓
+
+Reward
+
+↓
+
+Next Level
+Learning Journey
+Story
+
+↓
+
+Animation
+
+↓
+
+Concept
+
+↓
+
+Interactive Simulation
+
+↓
+
+Mini Game
+
+↓
+
+Quiz
+
+↓
+
+XP
+
+↓
+
+Badge
+
+↓
+
+Leaderboard
+Gamification Features
+Experience Points
+Lesson Completion
+Quiz Success
+Daily Login
+Helping Friends
+Science Experiments
+Coins
+
+Used for
+
+Avatar Items
+Themes
+New Worlds
+Hints
+Badges
+
+Math Hero
+
+Physics Genius
+
+Chemistry Wizard
+
+Biology Explorer
+
+Coding Ninja
+
+Village Innovator
+
+Attendance Champion
+
+Problem Solver
+
+Creative Thinker
+
+Levels
+Explorer
+
+↓
+
+Inventor
+
+↓
+
+Scientist
+
+↓
+
+Engineer
+
+↓
+
+Innovator
+
+↓
+
+STEM Master
+Daily Challenges
+
+Examples
+
+Solve 5 Math Questions
+
+Watch Science Animation
+
+Finish One Coding Puzzle
+
+Complete One Experiment
+
+Weekly Missions
+
+Complete Algebra Chapter
+
+Complete Motion Lab
+
+Finish Coding Basics
+
+Subjects
+Mathematics
+
+Interactive puzzles
+
+Math race
+
+Number games
+
+Treasure hunt
+
+Physics
+
+Motion simulation
+
+Gravity games
+
+Electric circuit builder
+
+Chemistry
+
+Virtual laboratory
+
+Mix chemicals safely
+
+Reaction puzzles
+
+Biology
+
+Human body explorer
+
+Plant growth simulation
+
+Cell adventure
+
+Coding
+
+Blockly programming
+
+Python basics
+
+Scratch games
+
+Robotics
+
+Virtual robot builder
+
+Sensors
+
+Automation
+
+Virtual STEM Lab
+
+Students can:
+
+Build circuits
+Conduct chemistry experiments
+Explore the solar system
+Assemble machines
+Learn coding through simulations
+Teacher Dashboard
+Features
+
+Student Performance
+
+Assignments
+
+Class Analytics
+
+Progress Tracking
+
+Attendance
+
+Reports
+
+Leaderboard
+
+Weak Topic Detection
+
+Parent Dashboard
+
+Daily Learning Time
+
+Progress Report
+
+Achievements
+
+Recommendations
+
+Monthly Performance
+
+Notifications
+
+Reward Economy
+
+Students earn
+
+XP
+
+Coins
+
+Stars
+
+Badges
+
+Certificates
+
+Trophies
+
+Village Champion Title
+
+User Flow
+Open App
+
+↓
+
+Select Language
+
+↓
+
+Choose Class
+
+↓
+
+Choose Subject
+
+↓
+
+Watch Story
+
+↓
+
+Learn Concept
+
+↓
+
+Play Game
+
+↓
+
+Quiz
+
+↓
+
+Reward
+
+↓
+
+Progress Dashboard
+
+↓
+
+Next Mission
+Color Palette
+
+Primary
+
+Purple (#6C63FF)
+
+Secondary
+
+Green (#34C759)
+
+Accent
+
+Orange (#FFB703)
+
+Background
+
+White (#FFFFFF)
+
+Light Gray (#F7F8FA)
+
+Typography
+
+Headings
+
+Poppins Bold
+
+Body
+
+Inter
+
+Buttons
+
+Poppins SemiBold
+
+UI Components
+Hero Banner
+Search Bar
+Class Cards
+Subject Cards
+Progress Cards
+XP Counter
+Coin Counter
+Leaderboard
+Badge Gallery
+Achievement Pop-ups
+Quest Cards
+Mission Timeline
+Virtual Lab Cards
+Teacher Analytics Dashboard
+Parent Dashboard
+Technology Stack
+Layer	Technology
+Frontend	Flutter (Android-first), React (Web)
+Backend	Node.js
+Database	PostgreSQL / Firebase Firestore
+Authentication	Firebase Auth
+Storage	Firebase Storage
+Analytics	Firebase Analytics
+Notifications	Firebase Cloud Messaging
+AI (Future)	Large Language Model + Recommendation Engine
+Research Evaluation Plan
+
+Research Design: Quasi-experimental (Pre-test/Post-test)
+
+Participants: Rural students in Classes 6–12
+
+Duration: 10–12 weeks
+
+Metrics:
+
+STEM Anxiety Score
+Interest in STEM Survey
+Academic Performance
+Attendance
+Daily Active Usage
+Lesson Completion Rate
+Quiz Accuracy
+Teacher Feedback
+Parent Satisfaction
+Deliverables for an Academic Capstone
+
+For a complete final-year project or master's thesis, I can also prepare:
+
+A 50–70 page IEEE-format Project Report.
+A high-fidelity Figma UI/UX design with 20+ screens (homepage, dashboard, gamification, virtual lab, teacher and parent portals).
+A Software Requirements Specification (SRS) document following IEEE 830.
+User personas, user journeys, and information architecture.
+Use case, sequence, activity, and ER diagrams.
+A database schema and API documentation.
+A complete Flutter frontend design system and component library.

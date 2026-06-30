@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>STEM Quest - Play, Learn, Explore</title>
+  <meta name="description" content="A gamified learning platform designed for rural students to explore STEM, complete quests, and build virtual simulations.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="logo-container" onclick="switchView('landing-view')">
+        <div class="logo-icon">Q</div>
+        <span class="logo-text">STEM Quest</span>
+      </div>
+      
+      <nav>
+        <ul class="nav-links">
+          <li class="active"><a href="#" onclick="switchView('landing-view'); return false;">Home</a></li>
+          <li><a href="#" onclick="switchView('dashboard-view'); return false;">Dashboard</a></li>
+          <li><a href="#" onclick="switchView('lab-view'); return false;">STEM Lab</a></li>
+          <li><a href="#" onclick="switchView('quiz-view'); return false;">Quizzes</a></li>
+          <li><a href="#" onclick="switchView('leaderboard-view'); return false;">Leaderboard</a></li>
+          <li><a href="#" onclick="switchView('teachers-view'); return false;">Teachers & Parents</a></li>
+        </ul>
+      </nav>
+
+      <!-- Live Gamification Stats -->
+      <div class="nav-stats">
+        <div class="stat-item xp" title="Experience Points">
+          <span>⚡</span> <span class="xp-val">1250</span> XP
+        </div>
+        <div class="stat-item coins" title="Reward Coins">
+          <span>🪙</span> <span class="coins-val">450</span>
+        </div>
+        <div class="stat-item streak" title="Daily Streak">
+          <span>🔥</span> <span class="streak-val">21</span> Days
+        </div>
+      </div>
+    </header>
+
+    <!-- LANDING VIEW -->
+    <main id="landing-view" class="view-section active">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>Every Student Can Become a Scientist</h1>
+          <p>Learn Science, Mathematics, and Coding through adventure stories, interactive virtual laboratories, and gamified challenges aligned directly with your school curriculum.</p>
+          <div class="hero-buttons">
+            <button class="btn btn-primary" onclick="switchView('dashboard-view')">Start Learning</button>
+            <button class="btn btn-secondary" onclick="switchView('lab-view')">Play Demo Lab</button>
+          </div>
+        </div>
+        <div class="hero-art">
+          <!-- Premium Animated SVGs for STEM Art -->
+          <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#6C63FF;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#34C759;stop-opacity:1" />
+              </linearGradient>
+              <filter id="glow">
+                <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                <feMerge>
+                  <feMergeNode in="coloredBlur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+            </defs>
+            <!-- Background grids -->
+            <circle cx="250" cy="200" r="160" fill="none" stroke="rgba(108,99,255,0.08)" stroke-width="2" />
+            <circle cx="250" cy="200" r="100" fill="none" stroke="rgba(52,199,89,0.08)" stroke-width="2" />
+            <!-- Floating icons -->
+            <g transform="translate(180, 80)">
+              <rect x="0" y="0" width="140" height="90" rx="10" fill="rgba(30,32,66,0.9)" stroke="#6C63FF" stroke-width="2" />
+              <text x="70" y="50" font-family="'Poppins', sans-serif" font-weight="bold" fill="white" font-size="16" text-anchor="middle">E = mc²</text>
+            </g>
+            <!-- Atom orbits -->
+            <ellipse cx="250" cy="230" rx="130" ry="45" fill="none" stroke="url(#grad1)" stroke-width="2.5" transform="rotate(30, 250, 230)" />
+            <ellipse cx="250" cy="230" rx="130" ry="45" fill="none" stroke="url(#grad1)" stroke-width="2.5" transform="rotate(-30, 250, 230)" />
+            <!-- Central Atom Nucleus -->
+            <circle cx="250" cy="230" r="18" fill="#ffb703" filter="url(#glow)" />
+            <circle cx="244" cy="226" r="8" fill="#6C63FF" />
+            <circle cx="256" cy="234" r="8" fill="#34C759" />
+            <!-- Small floating particles/electrons -->
+            <circle cx="130" cy="160" r="6" fill="#6C63FF" filter="url(#glow)" />
+            <circle cx="370" cy="300" r="6" fill="#34C759" filter="url(#glow)" />
+            <circle cx="340" cy="130" r="8" fill="#ffb703" filter="url(#glow)" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- Quick Class Categories -->
+      <h2 class="landing-section-title">Select Your <span>Class</span></h2>
+      <div class="classes-grid">
+        <div class="class-card" onclick="selectClass(6)">
+          <h3>Class 6</h3>
+          <p>Curiosity & Fun</p>
+        </div>
+        <div class="class-card" onclick="selectClass(7)">
+          <h3>Class 7</h3>
+          <p>Discover STEM</p>
+        </div>
+        <div class="class-card" onclick="selectClass(8)">
+          <h3>Class 8</h3>
+          <p>Build Systems</p>
+        </div>
+        <div class="class-card" onclick="selectClass(9)">
+          <h3>Class 9</h3>
+          <p>Logic & Reason</p>
+        </div>
+        <div class="class-card" onclick="selectClass(10)">
+          <h3>Class 10</h3>
+          <p>Board Missions</p>
+        </div>
+        <div class="class-card" onclick="selectClass(11)">
+          <h3>Class 11</h3>
+          <p>Advanced Theory</p>
+        </div>
+        <div class="class-card" onclick="selectClass(12)">
+          <h3>Class 12</h3>
+          <p>Final Challenge</p>
+        </div>
+      </div>
+
+      <!-- Subjects -->
+      <h2 class="landing-section-title">Explore <span>STEM Subjects</span></h2>
+      <div class="subject-grid">
+        <div class="subject-card math" onclick="switchView('dashboard-view')">
+          <div class="subject-icon">🧮</div>
+          <h3>Mathematics</h3>
+          <p>Fractions, Geometry, and Algebra made easy through interactive race games and village-building puzzles.</p>
+        </div>
+        <div class="subject-card science" onclick="switchView('lab-view')">
+          <div class="subject-icon">🔬</div>
+          <h3>Science & Labs</h3>
+          <p>Perform chemistry and circuit builder simulations safely on your device screen without any messy setups.</p>
+        </div>
+        <div class="subject-card physics" onclick="switchView('lab-view')">
+          <div class="subject-icon">⚛</div>
+          <h3>Physics</h3>
+          <p>Learn equations of motion, gravity mechanics, and electrical circuits through interactive simulator tools.</p>
+        </div>
+        <div class="subject-card coding" onclick="switchView('quiz-view')">
+          <div class="subject-icon">💻</div>
+          <h3>Coding Basics</h3>
+          <p>Understand loops, blocks, and sequence logic by guiding explorer robots through maze challenges.</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- STUDENT DASHBOARD VIEW -->
+    <main id="dashboard-view" class="view-section">
+      <div style="margin-bottom: 2rem;">
+        <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Welcome back, Rahul!</h1>
+        <p style="color: var(--text-dark-secondary);">Class 8 • Sonpur Government High School</p>
+      </div>
+
+      <div class="dashboard-grid">
+        <!-- Main Panel (Left) -->
+        <div>
+          <!-- Continue Learning Track -->
+          <div class="dashboard-card">
+            <h2>Continue Learning <span>3 Active Chapters</span></h2>
+            <div class="progress-list">
+              <div class="progress-row">
+                <div class="progress-info">
+                  <span>🔬 Science (Electricity)</span>
+                  <span>75%</span>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill science" style="width: 75%;"></div>
+                </div>
+              </div>
+              
+              <div class="progress-row">
+                <div class="progress-info">
+                  <span>🧮 Mathematics (Fractions)</span>
+                  <span>58%</span>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill math" style="width: 58%;"></div>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <div class="progress-info">
+                  <span>💻 Coding (Blockly Logic)</span>
+                  <span>20%</span>
+                </div>
+                <div class="progress-bar-bg">
+                  <div class="progress-bar-fill coding" style="width: 20%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Today's Quests -->
+          <div class="dashboard-card">
+            <h2>Today's Quests</h2>
+            <div class="quest-timeline">
+              <div class="quest-item" onclick="switchView('lab-view')">
+                <div class="quest-status">⚡</div>
+                <div class="quest-details">
+                  <h4>Build a Closed Electric Circuit</h4>
+                  <p>Open the Virtual STEM Lab and connect the wires to turn on the light bulb.</p>
+                </div>
+                <div class="quest-xp">+50 XP</div>
+              </div>
+
+              <div class="quest-item" onclick="switchView('quiz-view')">
+                <div class="quest-status">📝</div>
+                <div class="quest-details">
+                  <h4>Complete Electricity Conceptual Quiz</h4>
+                  <p>Answer conceptual questions on current loops to earn your Explorer Badge.</p>
+                </div>
+                <div class="quest-xp">+150 XP</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Panel (Right) -->
+        <div>
+          <!-- User Stats Summary -->
+          <div class="dashboard-card" style="text-align: center; background: linear-gradient(135deg, var(--dark-surface), rgba(108,99,255,0.1));">
+            <div class="badge-icon" style="margin: 0 auto 1rem auto; width: 90px; height: 90px; font-size: 2.5rem; background: var(--dark-bg); border-color: var(--accent);">🛠</div>
+            <h3 style="font-size: 1.4rem; margin-bottom: 0.2rem;" id="db-level-val">Level 8</h3>
+            <p style="color: var(--accent); font-weight: bold; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;">Rank: Inventor</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.2rem;">
+              <div>
+                <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">Total XP</p>
+                <h4 style="font-size: 1.2rem; color: white;" class="xp-val">1,250</h4>
+              </div>
+              <div>
+                <p style="font-size: 0.75rem; color: var(--text-dark-secondary);">Next Rank</p>
+                <h4 style="font-size: 1.2rem; color: var(--primary);">1,500 XP</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievements/Badges unlocked -->
+          <div class="dashboard-card">
+            <h2>Badges Unlocked</h2>
+            <div class="badge-gallery">
+              <div class="badge-item" id="badge-math-warrior">
+                <div class="badge-icon locked">🏆</div>
+                <p>Math Warrior</p>
+              </div>
+              <div class="badge-item" id="badge-science-explorer">
+                <div class="badge-icon locked">🥇</div>
+                <p>Science Explorer</p>
+              </div>
+              <div class="badge-item" id="badge-coding-ninja">
+                <div class="badge-icon locked">⭐</div>
+                <p>Coding Ninja</p>
+              </div>
+              <div class="badge-item" id="badge-village-innovator">
+                <div class="badge-icon locked">🌾</div>
+                <p>Village Hero</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- STEM VIRTUAL LAB VIEW -->
+    <main id="lab-view" class="view-section">
+      <div style="margin-bottom: 2rem;">
+        <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Virtual STEM Lab</h1>
+        <p style="color: var(--text-dark-secondary);">Conduct safe experiments. Today's task: Complete the circuit to illuminate the bulb.</p>
+      </div>
+
+      <div class="lab-container">
+        <!-- Components Box -->
+        <div class="lab-panel">
+          <h3 style="margin-bottom: 1rem; color: var(--primary);">Components Desk</h3>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.05);">
+              <h4 style="color: white; margin-bottom: 0.2rem;">🔋 9V Battery</h4>
+              <p style="font-size: 0.8rem; color: var(--text-dark-secondary);">Provides the electromotive force to push charge through paths.</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.05);">
+              <h4 style="color: white; margin-bottom: 0.2rem;">💡 Filament Bulb</h4>
+              <p style="font-size: 0.8rem; color: var(--text-dark-secondary);">Converts electric energy into light & thermal heat when active.</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: var(--radius-md); border: 1px solid rgba(255,255,255,0.05);">
+              <h4 style="color: white; margin-bottom: 0.2rem;">🔌 Interactive Switch</h4>
+              <p style="font-size: 0.8rem; color: var(--text-dark-secondary);">Closes or opens the loop path. Toggle it inside the workspace.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Circuit Canvas -->
+        <div class="lab-workspace">
+          <div class="simulation-canvas">
+            <svg class="circuit-svg" viewBox="0 0 500 300">
+              <!-- Electrical Wire path -->
+              <path id="circuit-wires" class="wire-path" d="M 100 200 L 100 100 L 220 100 M 280 100 L 400 100 L 400 200 L 100 200" />
+              
+              <!-- Battery symbol -->
+              <g transform="translate(70, 160)">
+                <rect x="0" y="0" width="60" height="70" rx="5" fill="#2d3436" stroke="#475569" stroke-width="2" />
+                <rect x="15" y="-10" width="10" height="10" fill="#d63031" />
+                <rect x="35" y="-10" width="10" height="10" fill="#0984e3" />
+                <text x="20" y="-2" fill="white" font-size="8" font-weight="bold">+</text>
+                <text x="40" y="-2" fill="white" font-size="8" font-weight="bold">-</text>
+                <text x="30" y="40" fill="white" font-size="12" font-weight="bold" font-family="Poppins" text-anchor="middle">9V BATTERY</text>
+              </g>
+
+              <!-- Bulb holder -->
+              <g transform="translate(370, 160)">
+                <!-- Bulb Base -->
+                <rect x="15" y="40" width="30" height="15" fill="#b2bec3" />
+                <ellipse cx="30" cy="55" rx="15" ry="5" fill="#636e72" />
+                <!-- Glow area -->
+                <circle id="circuit-bulb-glow" class="bulb-glow" cx="30" cy="15" r="40" />
+                <!-- Bulb Glass -->
+                <circle cx="30" cy="15" r="25" fill="none" stroke="#fff" stroke-width="3" />
+                <!-- Filament -->
+                <path d="M 20 40 L 25 22 L 30 27 L 35 22 L 40 40" fill="none" stroke="#ffeaa7" stroke-width="2.5" />
+              </g>
+
+              <!-- Open Knife Switch -->
+              <g transform="translate(200, 70)">
+                <rect x="0" y="20" width="100" height="20" rx="3" fill="#636e72" />
+                <!-- Contacts -->
+                <circle cx="20" cy="30" r="8" fill="#d63031" />
+                <circle cx="80" cy="30" r="8" fill="#d63031" />
+                <!-- Lever (Interactive Switch handle) -->
+                <line id="circuit-switch-lever" class="switch-lever" x1="20" y1="30" x2="75" y2="-10" stroke="#ff7675" stroke-width="8" stroke-linecap="round" />
+                <text x="50" y="60" fill="white" font-size="10" font-family="Poppins" text-anchor="middle">TOGGLE SWITCH</text>
+              </g>
+            </svg>
+          </div>
+
+          <div style="background: rgba(11,12,22,0.8); border: 1px solid var(--dark-border); padding: 1rem 1.5rem; border-radius: var(--radius-md); text-align: center;">
+            <p id="circuit-status-text" style="font-size: 0.95rem;">Circuit status: <strong>Open (Off)</strong>. Click the switch handle above to close the loop!</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- QUIZZES VIEW -->
+    <main id="quiz-view" class="view-section">
+      <div style="margin-bottom: 2rem; text-align: center;">
+        <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Concept Challenge</h1>
+        <p style="color: var(--text-dark-secondary);">Apply your science experiment knowledge to earn reward badges.</p>
+      </div>
+
+      <div class="quiz-container">
+        <div class="quiz-header">
+          <div class="quiz-progress-text">Question 1 of 1</div>
+          <div class="quiz-timer">⏱ Conceptual Assessment</div>
+        </div>
+
+        <h3 class="quiz-question" id="quiz-q-text">Loading question details...</h3>
+
+        <!-- Multi-tier hint block -->
+        <div class="hint-section">
+          <div class="hint-header" onclick="toggleHint()">
+            <span>💡 Need a Visual Hint?</span>
+            <span id="hint-btn-label" style="font-size: 0.85rem; background: var(--accent-glow); padding: 0.25rem 0.6rem; border-radius: 4px;">Click to Reveal</span>
+          </div>
+          <p id="hint-text-1" class="hint-content" style="margin-top: 0.5rem; border-bottom: 1px dashed rgba(255, 183, 3, 0.2); padding-bottom: 0.5rem;">Hint 1: Think about how electric charge moves when there is a complete pathway.</p>
+          <p id="hint-text-2" class="hint-content" style="margin-top: 0.5rem;">Hint 2: The pathway must be 'closed' or unbroken for current to flow and heat the filament.</p>
+        </div>
+
+        <div class="quiz-options" id="quiz-options-container">
+          <!-- Dynamic options loaded via JS -->
+        </div>
+
+        <div id="quiz-feedback" style="background: rgba(255,255,255,0.04); border-radius: var(--radius-md); padding: 1.2rem; border-left: 4px solid var(--primary); display: none;">
+          <!-- Correct/Incorrect explanations rendered here -->
+        </div>
+      </div>
+    </main>
+
+    <!-- LEADERBOARDS VIEW -->
+    <main id="leaderboard-view" class="view-section">
+      <div style="margin-bottom: 2rem; text-align: center;">
+        <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Leaderboards</h1>
+        <p style="color: var(--text-dark-secondary);">Healthy friendly competition with neighboring classes, schools, and villages.</p>
+      </div>
+
+      <div class="leaderboard-container">
+        <!-- Switch tabs -->
+        <div class="leaderboard-tabs">
+          <button class="tab-btn active" id="tab-btn-students" onclick="renderLeaderboard('students')">Top Students</button>
+          <button class="tab-btn" id="tab-btn-schools" onclick="renderLeaderboard('schools')">Top Schools</button>
+          <button class="tab-btn" id="tab-btn-villages" onclick="renderLeaderboard('villages')">Top Villages</button>
+        </div>
+
+        <div class="leaderboard-list" id="leaderboard-list-container">
+          <!-- Rows rendered dynamically by js -->
+        </div>
+      </div>
+    </main>
+
+    <!-- TEACHERS & PARENTS DASHBOARDS -->
+    <main id="teachers-view" class="view-section">
+      <div style="margin-bottom: 2.5rem; border-bottom: 1px solid var(--dark-border); padding-bottom: 1.5rem;">
+        <h1 style="font-size: 2.2rem; margin-bottom: 0.5rem;">Class Administration & Parent Portal</h1>
+        <p style="color: var(--text-dark-secondary);">Monitor syllabus compliance, check weak topics, and trace student learning trajectories.</p>
+      </div>
+
+      <!-- Core performance cards -->
+      <h2 style="font-size: 1.5rem; margin-bottom: 1.2rem;">Teacher Insights: Class 8 (Section B)</h2>
+      <div class="metrics-grid">
+        <div class="metric-card green">
+          <h4>Average Active Time</h4>
+          <p class="metric-val">42m/day</p>
+        </div>
+        <div class="metric-card purple">
+          <h4>Weekly Quest Completion</h4>
+          <p class="metric-val">84%</p>
+        </div>
+        <div class="metric-card orange">
+          <h4>Detected Weak Topic</h4>
+          <p class="metric-val">Algebra</p>
+        </div>
+      </div>
+
+      <!-- Weekly graph -->
+      <div class="chart-box">
+        <h3 style="margin-bottom: 1.5rem; font-size: 1.2rem; color: white;">Weekly Classroom Attendance (Pre-test vs Post-test comparison)</h3>
+        <svg class="chart-svg" viewBox="0 0 500 200">
+          <!-- Grid lines -->
+          <line x1="40" y1="20" x2="480" y2="20" class="grid-line" />
+          <line x1="40" y1="60" x2="480" y2="60" class="grid-line" />
+          <line x1="40" y1="100" x2="480" y2="100" class="grid-line" />
+          <line x1="40" y1="140" x2="480" y2="140" class="grid-line" />
+          <line x1="40" y1="180" x2="480" y2="180" class="grid-line" />
+          
+          <!-- Y-axis scales -->
+          <text x="15" y="25" fill="var(--text-dark-secondary)" font-size="10">100%</text>
+          <text x="15" y="65" fill="var(--text-dark-secondary)" font-size="10">80%</text>
+          <text x="15" y="105" fill="var(--text-dark-secondary)" font-size="10">60%</text>
+          <text x="15" y="145" fill="var(--text-dark-secondary)" font-size="10">40%</text>
+          <text x="15" y="185" fill="var(--text-dark-secondary)" font-size="10">20%</text>
+          
+          <!-- Bar graph columns representing dynamic values -->
+          <!-- Mon -->
+          <rect class="bar-rect" x="65" y="180" width="30" height="0" rx="3" fill="#6C63FF" />
+          <text x="80" y="196" fill="var(--text-dark-secondary)" font-size="10" text-anchor="middle">Mon</text>
+          <!-- Tue -->
+          <rect class="bar-rect" x="150" y="180" width="30" height="0" rx="3" fill="#6C63FF" />
+          <text x="165" y="196" fill="var(--text-dark-secondary)" font-size="10" text-anchor="middle">Tue</text>
+          <!-- Wed -->
+          <rect class="bar-rect" x="235" y="180" width="30" height="0" rx="3" fill="#6C63FF" />
+          <text x="250" y="196" fill="var(--text-dark-secondary)" font-size="10" text-anchor="middle">Wed</text>
+          <!-- Thu -->
+          <rect class="bar-rect" x="320" y="180" width="30" height="0" rx="3" fill="#6C63FF" />
+          <text x="335" y="196" fill="var(--text-dark-secondary)" font-size="10" text-anchor="middle">Thu</text>
+          <!-- Fri -->
+          <rect class="bar-rect" x="405" y="180" width="30" height="0" rx="3" fill="#6C63FF" />
+          <text x="420" y="196" fill="var(--text-dark-secondary)" font-size="10" text-anchor="middle">Fri</text>
+        </svg>
+      </div>
+
+      <!-- Parent Section -->
+      <div class="dashboard-card" style="margin-top: 3rem;">
+        <h2 style="border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.8rem;">👨‍👩‍👦 Parent Feedback Corner</h2>
+        <div style="background: rgba(255,183,3,0.03); border: 1px solid rgba(255,183,3,0.1); padding: 1.5rem; border-radius: var(--radius-md); margin-top: 1rem;">
+          <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Recommendations for Rahul:</h4>
+          <p style="font-size: 0.95rem; line-height: 1.5; color: white;">"Rahul has excelled in science simulations this week (+200 XP). However, he spent less time on mathematics. We recommend encouraging him to complete the 'Fractions Quest' to balance his weekly learnings."</p>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>© 2026 STEM Quest gamified portal. Designed for India's rural schools. Play, Learn, and Innovate!</p>
+    </footer>
+  </div>
+
+  <!-- Success reward modal overlay -->
+  <div class="modal-overlay" id="success-modal-overlay">
+    <div class="modal-content">
+      <div class="modal-icon">🌟</div>
+      <h2 class="modal-title">Mission Complete!</h2>
+      <p style="font-weight: 600; color: white; margin-bottom: 1rem;" id="modal-custom-message">Quest Complete</p>
+      
+      <div style="background: rgba(255, 255, 255, 0.05); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 2rem;">
+        <p id="modal-xp-desc" style="color: var(--primary); font-weight: bold; font-size: 1.1rem; margin-bottom: 0.3rem;">+50 XP</p>
+        <p id="modal-coins-desc" style="color: var(--accent); font-weight: bold; font-size: 1.1rem;">+10 Coins</p>
+      </div>
+
+      <button class="btn btn-primary" id="close-modal-btn" style="width: 100%;">Keep Going</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
